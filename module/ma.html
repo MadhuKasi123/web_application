@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+     main();
+     function main()
+     {
+        let n1=number(prompt("enter n1 value"));
+        let n2=number(prompt("enter n2 value"));
+        let output=calc(n1,n2,add);
+        console.log(output);
+     }
+     function calc(a,b,callback)
+     {
+        let res=0;
+        res=callback(a,b);
+        return res;
+     }
+     function add(x,y)
+     {
+       return  x+y
+     }
+    
+   </script>
+</body>
+</html>

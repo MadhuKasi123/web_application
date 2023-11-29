@@ -1,0 +1,10 @@
+num=15
+n=0
+while(n**2<=num+1):
+    if(n**2==num+1):
+        print('sunny')
+        break
+    else:
+        n=n+1
+else:
+    print('not')

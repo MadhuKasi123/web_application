@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card</title>
+    <link rel="stylesheet"href="C:\Users\madhu\OneDrive\Desktop\Madhu-Royal\boostrap\css\bootstrap.css">
+    <link rel="stylesheet"href="C:\Users\madhu\OneDrive\Desktop\Madhu-Royal\boostrap\css\mdb.css">
+    <link rel="stylesheet"href= "C:\Users\madhu\OneDrive\Desktop\Madhu-Royal\boostrap\css\style.css">
+    <link rel="stylesheet"href= "C:\Users\madhu\OneDrive\Desktop\Madhu-Royal\style.css">
+    <link rel="stylesheet"href="C:\Users\madhu\OneDrive\Desktop\Madhu-Royal\boostrap\fontawesome\fa\css\all.css">
+    <style>
+        .card {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card mt-3 ml-auto">
+                <div class="card-header bg-white">
+                    <img src="C:\Users\madhu\OneDrive\Desktop\Madhu-Royal\img\v3.jpeg">
+                </div>
+                <div class="card-body bg-light text-white text-center">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="btn btn-md bg-danger text-white" id="likes">
+                                Likes
+                                <i class="fas fa-thumbs-up fa-2x ml-2"></i> <!-- Corrected the font-awesome class -->
+                            </button><br>
+                            <h1 class="text-dark" id="likesCount">0</h1>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-md bg-danger text-white" id="dislikes">
+                                Dislikes
+                                <i class="fas fa-thumbs-down fa-2x ml-2"></i> <!-- Corrected the font-awesome class -->
+                            </button><br>
+                            <h1 class="text-dark" id="dislikesCount">0</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-primary text-white text-center">
+                    <h1 id="total">Total: 0</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script code -->
+<script>
+    let likesCount = 0;
+    let dislikesCount = 0;
+    let total = 0;
+
+    const likesButton = document.getElementById("likes");
+    const dislikesButton = document.getElementById("dislikes");
+    const totalElement = document.getElementById("total");
+    const likesCountElement = document.getElementById("likesCount");
+    const dislikesCountElement = document.getElementById("dislikesCount");
+
+    likesButton.addEventListener('click', () => {
+        likesCount++;
+        total++;
+        likesCountElement.innerText = likesCount;
+        totalElement.innerText = "Total: " + total;
+    });
+
+    dislikesButton.addEventListener('click', () => {
+        dislikesCount++;
+        total++;
+        dislikesCountElement.innerText = dislikesCount;
+        totalElement.innerText = "Total: " + total;
+    });
+</script>
+
+<script src="C:\Users\madhu\OneDrive\Desktop\Madhu-Royal\boostrap\js\jquery.js"></script>
+<script src="C:\Users\madhu\OneDrive\Desktop\Madhu-Royal\boostrap\js\popper.js"></script>
+<script src="C:\Users\madhu\OneDrive\Desktop\Madhu-Royal\boostrap\js\bootstrap.js"></script>
+
+<script src="C:\Users\madhu\OneDrive\Desktop\Madhu-Royal\boostrap\js\mdb.js"></script>
+
+
+</body>
+</html>
